@@ -8,8 +8,8 @@ test("renders ContactForm without crashing", () => {
   render(<ContactForm />);
 });
 
-// test("First Name input has a max length", () => {
-//   const { gitByTestId } = render(<ContactForm />);
+test("First Name input has a max length", () => {
+  const { gitByTestId } = render(<ContactForm />);
 
-//   getByTestID(/maxLength/i);
-// });
+  getByTestID(/maxLength/i);
+});
