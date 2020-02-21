@@ -8,14 +8,20 @@ xtest("renders ContactForm without crashing", () => {
   render(<ContactForm />);
 });
 
-// test("First Name input has a max length", () => {
-//   const { getByTestId } = render(<ContactForm />);
+xtest("First Name input has a max length", () => {
+  const { getByText } = render(<ContactForm />);
 
-//   getByTestId(/maxLength/i);
-// });
+  getByText(/maxLength/i);
+});
 
-test("All input fields have a placeholder", () => {
+xtest("All input fields have a placeholder", () => {
     const { getByPlaceholderText } = render(<ContactForm />);
   
     getByPlaceholderText('');
   });
+
+describe("There is a max length of 3 in the First Name input field", () => {
+    it("max length of 3", () => {
+        expect(input.maxLength).toBe(3))
+    })
+})
