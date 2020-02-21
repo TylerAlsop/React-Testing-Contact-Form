@@ -20,10 +20,10 @@ test("renders ContactForm without crashing", () => {
 
 ///////////// First Name Input Field Test(s) /////////////
 
-test("There is a label text of 'First Name'", () => {
-    const { getByLabelText } = render(<ContactForm />);
+test("There is a label text of 'First Name*'", () => {
+    const { getByText } = render(<ContactForm />);
   
-    getByLabelText("First Name*");
+    getByText("First Name*");
 });
 
 test("There is an Id of 'firstName", () => {
@@ -40,10 +40,10 @@ test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
 
 ///////////// First Name Input Field Test(s) /////////////
 
-test("There is a label text of 'Last Name'", () => {
-    const { queryByLabelText } = render(<ContactForm />);
+test("There is a label text of 'Last Name*'", () => {
+    const { getByText } = render(<ContactForm />);
   
-    queryByLabelText(/Last Name/i);
+    getByText("Last Name*");
 });
 
 test("There is an Id of 'lastName", () => {
@@ -60,10 +60,10 @@ test("An input field has a placeholder of 'Enter Your Last Name Here'", () => {
 
 ///////////// Email Input Field Test(s) /////////////
 
-test("There is a label text of 'Email'", () => {
-    const { queryByLabelText } = render(<ContactForm />);
+test("There is a label text of 'Email*'", () => {
+    const { getByText } = render(<ContactForm />);
   
-    queryByLabelText(/Email/i);
+    getByText("Email*");
 });
 
 test("There is an Id of 'email", () => {
@@ -81,9 +81,9 @@ test("An input field has a placeholder of 'Enter Your E-mail Address Here'", () 
 ///////////// Message Input Field Test(s) /////////////
 
 test("There is a label text of 'Message'", () => {
-    const { queryByLabelText } = render(<ContactForm />);
+    const { getByText } = render(<ContactForm />);
   
-    queryByLabelText(/Message/i);
+    getByText("Message");
 });
 
 test("There is an Id of 'message", () => {
