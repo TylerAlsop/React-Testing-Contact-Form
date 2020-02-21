@@ -67,7 +67,7 @@ _If you come across any "unexpected" behaviors, try this flow:_
 
 ///////// UNEXPECTED /////////
 
--First Name input feild reaches a max length too quickly
+-First Name input feild reaches a max length too quickly. Max length appears to be 3 characters.
 
 -Email input feild doesn't seem to mind if it's a valid email address or not
 
