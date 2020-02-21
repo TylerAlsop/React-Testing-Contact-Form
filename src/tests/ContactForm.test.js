@@ -27,9 +27,9 @@ test("There is a label text of 'First Name*'", () => {
 });
 
 test("There is an Id of 'firstName", () => {
-    const { queryByTestId } = render(<ContactForm />);
+    const { getByTestId } = render(<ContactForm />);
 
-    queryByTestId("firstName");
+    getByTestId("firstName");
 });
 
 test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
