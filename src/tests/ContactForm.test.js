@@ -47,9 +47,9 @@ test("There is a label text of 'Last Name*'", () => {
 });
 
 test("There is an Id of 'lastName", () => {
-    const { queryByTestId } = render(<ContactForm />);
+    const { getByTestId } = render(<ContactForm />);
 
-    queryByTestId("lastName");
+    getByTestId("lastName");
 });
 
 test("An input field has a placeholder of 'Enter Your Last Name Here'", () => {
@@ -67,9 +67,9 @@ test("There is a label text of 'Email*'", () => {
 });
 
 test("There is an Id of 'email", () => {
-    const { queryByTestId } = render(<ContactForm />);
+    const { getByTestId } = render(<ContactForm />);
 
-    queryByTestId("email");
+    getByTestId("email");
 });
 
 test("An input field has a placeholder of 'Enter Your E-mail Address Here'", () => {
@@ -87,9 +87,9 @@ test("There is a label text of 'Message'", () => {
 });
 
 test("There is an Id of 'message", () => {
-    const { queryByTestId } = render(<ContactForm />);
+    const { getByTestId } = render(<ContactForm />);
 
-    queryByTestId("message");
+    getByTestId("message");
 });
 
 test("An input field has a placeholder of 'Optional'", () => {
