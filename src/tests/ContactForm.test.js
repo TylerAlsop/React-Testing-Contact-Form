@@ -32,6 +32,12 @@ test("An input field has a placeholder of 'Enter Your E-mail Address Here'", () 
     getByPlaceholderText(/Enter Your E-mail Address Here/i);
 });
 
+test("An input field has a placeholder of 'Optional'", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
+    
+    getByPlaceholderText(/Optional/i);
+});
+
 
 
 test("Submit has id", () => {
