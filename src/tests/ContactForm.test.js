@@ -1,5 +1,5 @@
 import React from "react";
-import { render, getByText } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import App from "../App";
 import ContactForm from '../components/ContactForm';
 import 'mutationobserver-shim';
@@ -9,7 +9,7 @@ xtest("renders ContactForm without crashing", () => {
 });
 
 test("First Name input has a max length", () => {
-  const { gitByTestId } = render(<ContactForm />);
+  const { queryByLabelText } = render(<ContactForm />);
 
-  getByTestID(/maxLength/i);
+  queryByLabelText(/maxLength/i);
 });
