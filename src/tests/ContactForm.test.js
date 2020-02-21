@@ -20,6 +20,14 @@ test("An input field has a placeholder of 'bill'", () => {
     getAllByPlaceholderText(/bill/i);
   });
 
+test("An input field has a placeholder of 'luo'", () => {
+const { getAllByPlaceholderText } = render(<ContactForm />);
+
+getAllByPlaceholderText(/luo/i);
+});
+
+
+
 
 test("Submit has id", () => {
     const { queryByTestId } = render(<ContactForm />);
