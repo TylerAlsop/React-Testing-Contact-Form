@@ -4,21 +4,32 @@ import App from "../App";
 import ContactForm from '../components/ContactForm';
 import 'mutationobserver-shim';
 
-xtest("renders ContactForm without crashing", () => {
+test("renders ContactForm without crashing", () => {
   render(<ContactForm />);
 });
 
-xtest("First Name input has a max length", () => {
-  const { getByText } = render(<ContactForm />);
+// test("First Name input has a max length", () => {
+//   const { getByText } = render(<ContactForm />);
 
-  getByText(/maxLength/i);
-});
+//   getByText(/maxLength/i);
+// });
 
-xtest("All input fields have a placeholder", () => {
-    const { getByPlaceholderText } = render(<ContactForm />);
+test("An input field has a placeholder of 'bill'", () => {
+    const { getAllByPlaceholderText } = render(<ContactForm />);
   
-    getByPlaceholderText('');
+    getAllByPlaceholderText(/bill/i);
   });
+
+
+test("Submit has id", () => {
+    const { queryByTestId } = render(<ContactForm />);
+
+    queryByTestId(/submit/i);
+})
+
+
+
+
 
 // xdescribe("There is a max length of 3 in the First Name input field", () => {
 //     it("max length of 3", () => {
@@ -26,11 +37,7 @@ xtest("All input fields have a placeholder", () => {
 //     })
 // })
 
-test("Submit has id", () => {
-    const { queryByTestId } = render(<ContactForm />);
 
-    queryByTestId(/submit/i);
-})
 
 // test("Submit button fires when clicked", () => {
 //     const { getByTestId } = render(<ContactForm />);
