@@ -8,8 +8,14 @@ xtest("renders ContactForm without crashing", () => {
   render(<ContactForm />);
 });
 
-test("First Name input has a max length", () => {
-  const { queryByLabelText } = render(<ContactForm />);
+// test("First Name input has a max length", () => {
+//   const { getByTestId } = render(<ContactForm />);
 
-  queryByLabelText(/maxLength/i);
-});
+//   getByTestId(/maxLength/i);
+// });
+
+test("First Name input has a max length", () => {
+    const { getByTestId } = render(<ContactForm />);
+  
+    getByTestId(/maxLength/i);
+  });
