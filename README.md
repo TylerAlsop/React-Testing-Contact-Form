@@ -59,3 +59,27 @@ _If you come across any "unexpected" behaviors, try this flow:_
 
 - Add more elements to the form - eg dropdown, checkbox, etc
   - Add tests to include the new form elements
+
+
+
+
+////////////////////////////  NOTES OF UNEXPECTED BEHAVIORS AND TESTS TO CREATE  ////////////////////////////
+
+///////// UNEXPECTED /////////
+
+-First Name input feild reaches a max length too quickly
+
+-Email input feild doesn't seem to mind if it's a valid email address or not
+
+-Submit button doesn't seem to work. I added a console.log(data) in the ContactForm after the submit button and nothing shows up on the console.
+
+-Input fields do not reset to default after clicking submit.
+
+-Email and Message input fields don't appear to have placeholders
+
+
+///////// EXPECTED and WORKING /////////
+
+-Required fields show an error if there is no input
+
+-
