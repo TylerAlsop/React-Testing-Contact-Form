@@ -14,18 +14,23 @@ test("renders ContactForm without crashing", () => {
 //   getByText(/maxLength/i);
 // });
 
-test("An input field has a placeholder of 'bill'", () => {
-    const { getAllByPlaceholderText } = render(<ContactForm />);
+test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
   
-    getAllByPlaceholderText(/bill/i);
+    getByPlaceholderText(/Enter Your First Name Here/i);
   });
 
-test("An input field has a placeholder of 'luo'", () => {
-const { getAllByPlaceholderText } = render(<ContactForm />);
+test("An input field has a placeholder of 'Enter Your Last Name Here'", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
 
-getAllByPlaceholderText(/luo/i);
+    getByPlaceholderText(/Enter Your Last Name Here/i);
 });
 
+test("An input field has a placeholder of 'Enter Your E-mail Address Here'", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
+    
+    getByPlaceholderText(/Enter Your E-mail Address Here/i);
+});
 
 
 
