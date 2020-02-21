@@ -20,8 +20,21 @@ xtest("All input fields have a placeholder", () => {
     getByPlaceholderText('');
   });
 
-describe("There is a max length of 3 in the First Name input field", () => {
-    it("max length of 3", () => {
-        expect(input.maxLength).toBe(3))
-    })
+// xdescribe("There is a max length of 3 in the First Name input field", () => {
+//     it("max length of 3", () => {
+//         expect(input.maxLength).toBe(3))
+//     })
+// })
+
+test("Submit has id", () => {
+    const { queryByTestId } = render(<ContactForm />);
+
+    queryByTestId(/submit/i);
 })
+
+// test("Submit button fires when clicked", () => {
+//     const { getByTestId } = render(<ContactForm />);
+
+//     fireEvent.click(getByTestId(/submit/i));
+
+// })
