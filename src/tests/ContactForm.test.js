@@ -4,12 +4,32 @@ import App from "../App";
 import ContactForm from '../components/ContactForm';
 import 'mutationobserver-shim';
 
-///////////// Empty Test Template /////////////
+///////////// Test(s) Empty Template /////////////
 
 test("", () => {
     const {  } = render(<ContactForm />);
   
     (/yourtexthere/i);
+});
+
+///////////// First Name Input Field Test(s) /////////////
+
+test("There is a label text of 'First Name'", () => {
+    const { queryByLabelText } = render(<ContactForm />);
+  
+    queryByLabelText(/First Name/i);
+});
+
+test("There is an Id of 'firstName", () => {
+    const { queryByTestId } = render(<ContactForm />);
+
+    queryByTestId(/Email Name/i);
+});
+
+test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
+  
+    getByPlaceholderText(/Enter Your First Name Here/i);
 });
 
 ///////////// ContactForm Render Test(s) /////////////
@@ -22,11 +42,7 @@ test("renders ContactForm without crashing", () => {
 ///////////// Placeholder Text Test(s) /////////////
 
 
-test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
-    const { getByPlaceholderText } = render(<ContactForm />);
-  
-    getByPlaceholderText(/Enter Your First Name Here/i);
-});
+
 
 test("An input field has a placeholder of 'Enter Your Last Name Here'", () => {
     const { getByPlaceholderText } = render(<ContactForm />);
