@@ -9,11 +9,14 @@ const ContactForm = () => {
   const onSubmit = data => {
     setData(data);
     console.log(data);
+
   };
+
+
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={onSubmit}>
         <div>
           <label htmlFor="firstName">First Name*</label>
           <input
@@ -56,7 +59,7 @@ const ContactForm = () => {
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
-        <input type="submit" />
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

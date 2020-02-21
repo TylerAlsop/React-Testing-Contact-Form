@@ -21,9 +21,9 @@ test("renders ContactForm without crashing", () => {
 ///////////// First Name Input Field Test(s) /////////////
 
 test("There is a label text of 'First Name'", () => {
-    const { queryByLabelText } = render(<ContactForm />);
+    const { getByLabelText } = render(<ContactForm />);
   
-    queryByLabelText(/First Name/i);
+    getByLabelText("First Name*");
 });
 
 test("There is an Id of 'firstName", () => {
@@ -107,6 +107,8 @@ test("Submit has id", () => {
 
     queryByTestId(/submit/i);
 })
+
+
 
 
 
