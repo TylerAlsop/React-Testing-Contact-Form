@@ -4,21 +4,29 @@ import App from "../App";
 import ContactForm from '../components/ContactForm';
 import 'mutationobserver-shim';
 
+///////////// Empty Test Template /////////////
+
+test("", () => {
+    const {  } = render(<ContactForm />);
+  
+    (/yourtexthere/i);
+});
+
+///////////// ContactForm Render Test(s) /////////////
+
 test("renders ContactForm without crashing", () => {
   render(<ContactForm />);
 });
 
-// test("First Name input has a max length", () => {
-//   const { getByText } = render(<ContactForm />);
 
-//   getByText(/maxLength/i);
-// });
+///////////// Placeholder Text Test(s) /////////////
+
 
 test("An input field has a placeholder of 'Enter Your First Name Here'", () => {
     const { getByPlaceholderText } = render(<ContactForm />);
   
     getByPlaceholderText(/Enter Your First Name Here/i);
-  });
+});
 
 test("An input field has a placeholder of 'Enter Your Last Name Here'", () => {
     const { getByPlaceholderText } = render(<ContactForm />);
@@ -38,6 +46,10 @@ test("An input field has a placeholder of 'Optional'", () => {
     getByPlaceholderText(/Optional/i);
 });
 
+///////////// Submit Test(s) /////////////
+
+
+///////////// Submit Test(s) /////////////
 
 
 test("Submit has id", () => {
@@ -48,6 +60,14 @@ test("Submit has id", () => {
 
 
 
+///////////// Incorrect Syntax / Couldn't Out How Test(s) /////////////
+
+
+// test("First Name input has a max length", () => {
+//   const { getByText } = render(<ContactForm />);
+
+//   getByText(/maxLength/i);
+// });
 
 
 // xdescribe("There is a max length of 3 in the First Name input field", () => {
