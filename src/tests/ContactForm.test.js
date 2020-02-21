@@ -14,8 +14,8 @@ xtest("renders ContactForm without crashing", () => {
 //   getByTestId(/maxLength/i);
 // });
 
-test("First Name input has a max length", () => {
-    const { getByTestId } = render(<ContactForm />);
+test("All input fields have a placeholder", () => {
+    const { getByPlaceholderText } = render(<ContactForm />);
   
-    getByTestId(/maxLength/i);
+    getByPlaceholderText('');
   });
